@@ -135,6 +135,8 @@ class CoolAlertContainer extends StatelessWidget {
               Theme.of(context).textTheme.titleLarge?.copyWith(
                     fontWeight: FontWeight.bold,
                   ),
+          textAlign: options.titleTextAlign,
+          overflow: options.titleOverflow,
         ),
       );
     }
@@ -152,8 +154,9 @@ class CoolAlertContainer extends StatelessWidget {
       }
       return Text(
         text ?? '',
-        textAlign: TextAlign.center,
+        textAlign: options.textTextAlign,
         style: options.textTextStyle,
+        overflow: options.textOverflow,
       );
     }
   }
