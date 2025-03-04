@@ -38,7 +38,7 @@ class CoolAlertButtons extends StatelessWidget {
       isOkayBtn: true,
       text: options.confirmBtnText!,
       onTap: () {
-        options.onConfirmBtnTap?.call();
+        options.onConfirmBtnTap?.call(context);
 
         // If autoCloseDuration is NOT null, it means the dialg will be auto closed, so disable confirm button tap
         if (options.autoCloseDuration != null) {
@@ -66,7 +66,7 @@ class CoolAlertButtons extends StatelessWidget {
       isOkayBtn: false,
       text: options.cancelBtnText!,
       onTap: () {
-        options.onCancelBtnTap?.call();
+        options.onCancelBtnTap?.call(context);
         Navigator.pop(context);
       },
     );

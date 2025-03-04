@@ -43,11 +43,11 @@ class CoolAlert {
     /// Barrier Dissmisable
     bool barrierDismissible = true,
 
-    // Triggered when confirm button is tapped
-    VoidCallback? onConfirmBtnTap,
+    /// Triggered when confirm button is tapped, [BuildContext] parameter is scoped to the dialog
+    void Function(BuildContext)? onConfirmBtnTap,
 
-    /// Triggered when cancel button is tapped
-    VoidCallback? onCancelBtnTap,
+    /// Triggered when cancel button is tapped, [BuildContext] parameter is scoped to the dialog
+    void Function(BuildContext)? onCancelBtnTap,
 
     /// Confirmation button text
     String confirmBtnText = 'Ok',
