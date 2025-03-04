@@ -39,10 +39,10 @@ CoolAlert.show(
 | text                 | String            | Set the description text of the dialog.                                         |                                   Null                                    |
 | widget               | Widget            | Set any you expect widget of the dialog.                                        |                                   Null                                    |
 | confirmBtnText       | String            | Text of confirm button                                                          |                                   'Ok'                                    |
-| confirmBtnTap        | Function          | Function that handle click of confirm button                                    |                       () => Navigator.pop(context)                        |
+| confirmBtnTap        | void Function(BuildContext)? | Function that handle click of confirm button, provides dialog context parameter. |                          (c) => Navigator.pop(c)                          |
 | confirmBtnColor      | Color             | Color of confirm Button                                                         |                      Theme.of(context).primaryColor                       |
 | cancelBtnText        | String            | Text of cancel button                                                           |                                 'Cancel'                                  |
-| cancelBtnTap         | Function          | Function that handle click of cancel button                                     |                       () => Navigator.pop(context)                        |
+| cancelBtnTap         | void Function(BuildContext)? | Function that handle click of cancel button, provides dialog context parameter.  |                          (c) => Navigator.pop(c)                          |
 | barrierDismissible   | bool              | Dismiss dialog on touch overlay                                                 |                                   true                                    |
 | animType             | CoolAlertAnimType | Type of dialogue enter animation                                                |                          CoolAlertAnimType.scale                          |
 | backgroundColor      | Color             | Background color of the animation                                               |                             Color(0xFF515C6F)                             |
@@ -60,9 +60,29 @@ CoolAlert.show(
 | titleOverflow        | TextOverflow      | Text overflow for title                                                         |                                   Null                                    |
 | textTextAlign        | TextAlign         | Text alignment for text                                                         |                             TextAlign.center                              |
 | textOverflow         | TextOverflow      | Text overflow for text                                                          |                                   Null                                    |
+| canPop               | boolean                      | Prevents undesired navigation unless explicitly desired.                         |                                   true                                    |
+| onPopInvoked         | void Function(bool)?         | Notifies of whether the context was popped with `didPop` parameter               |                                   Null                                    |
 
+### Popping the dialog
 
+To pop the dialog from one of the buttons, you have the following options.
 
+1. Using `closeOnConfirmBtnTap: true` will automatically pop the dialog when the confirm button is tapped.
+2. Using `confirmBtnTap` or `cancelBtnTap` functions to pop the dialog manually. This should be done with the context provided (see notes below)
+```dart
+CoolAlert.show(
+   context: context,
+   type: CoolAlertType.success,
+   text: "Your transaction was successful!",
+   confirmBtnTap: (dialogContext) {
+      Navigator.pop(dialogContext);
+   }
+);
+```
+**Notes:** 
+
+- if you have have `closeOnConfirmBtnTap: true` while calling `Navigator.pop(dialogContext)` in the above example, you'll pop twice and may run into some issues. Have either one or the other.
+- If you have `autoCloseDuration` set, this is a wrapper for `Navigator.pop(coolAlertParentContext, rootNavigator: true)` after the duration is up. In the above example, if the user taps "confirm" and the dialog auto closes, it will pop twice and you may run into issues.
 
 
 

@@ -43,11 +43,11 @@ class CoolAlert {
     /// Barrier Dissmisable
     bool barrierDismissible = true,
 
-    // Triggered when confirm button is tapped
-    VoidCallback? onConfirmBtnTap,
+    /// Triggered when confirm button is tapped, [BuildContext] parameter is scoped to the dialog
+    void Function(BuildContext)? onConfirmBtnTap,
 
-    /// Triggered when cancel button is tapped
-    VoidCallback? onCancelBtnTap,
+    /// Triggered when cancel button is tapped, [BuildContext] parameter is scoped to the dialog
+    void Function(BuildContext)? onCancelBtnTap,
 
     /// Confirmation button text
     String confirmBtnText = 'Ok',
@@ -117,6 +117,14 @@ class CoolAlert {
     /// When it is false, you will have to close it manually by using Navigator.of(context).pop();
     bool closeOnConfirmBtnTap = true,
 
+    /// Determines if the dialog can be popped, a wrapper for [PopScope.canPop].
+    /// If false, the dialog will not be popped.
+    bool canPop = true,
+
+    /// Triggered when the dialog is popped, a wrapper for [PopScope.onPopInvoked].
+    /// [bool] parameter indicates if the dialog has been popped.
+    void Function(bool)? onPopInvoked,
+
     /// Reverse the order of the buttons
     bool reverseBtnOrder = false,
   }) {
@@ -159,7 +167,7 @@ class CoolAlert {
       reverseBtnOrder: reverseBtnOrder,
     );
 
-    final child = AlertDialog(
+    final dialog = AlertDialog(
       contentPadding: EdgeInsets.zero,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(borderRadius),
@@ -167,6 +175,12 @@ class CoolAlert {
       content: CoolAlertContainer(
         options: options,
       ),
+    );
+
+    final child = PopScope(
+      canPop: canPop,
+      onPopInvoked: onPopInvoked,
+      child: dialog,
     );
 
     return showGeneralDialog(

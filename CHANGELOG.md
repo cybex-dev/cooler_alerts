@@ -1,6 +1,11 @@
 ## [2.1.0] - 04/03/2025
 
 - Added TextAlign & Overflow options for title & text (or body).
+- **BREAKING CHANGES!**: added dialog context to `confirmBtnTap` and `cancelBtnTap` functions. Signatures now are:
+```dart
+void Function(BuildContext context);
+```
+- Added `PopScope` widget with `canPop` to prevent unwanted navigation while dialog is showing.
 - Updated README
 
 ## [2.0.1] - 06/03/2023
