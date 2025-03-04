@@ -16,7 +16,11 @@ class CoolAlertOptions {
   TextStyle? confirmBtnTextStyle;
   TextStyle? cancelBtnTextStyle;
   TextStyle? titleTextStyle;
+  TextAlign? titleTextAlign;
+  TextOverflow? titleOverflow;
   TextStyle? textTextStyle;
+  TextAlign? textTextAlign;
+  TextOverflow? textOverflow;
   bool? showCancelBtn;
   double? borderRadius;
   Color? backgroundColor;
@@ -44,7 +48,11 @@ class CoolAlertOptions {
     this.confirmBtnTextStyle,
     this.cancelBtnTextStyle,
     this.titleTextStyle,
+    this.titleTextAlign,
+    this.titleOverflow,
     this.textTextStyle,
+    this.textTextAlign,
+    this.textOverflow,
     this.showCancelBtn,
     this.borderRadius,
     this.backgroundColor,

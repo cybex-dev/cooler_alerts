@@ -67,8 +67,20 @@ class CoolAlert {
     /// TextStyle for title
     TextStyle? titleTextStyle,
 
+    /// TextOverflow for title
+    TextOverflow? titleOverflow,
+
+    /// TextAlign for title
+    TextAlign titleTextAlign = TextAlign.center,
+
     /// TextStyle for text
     TextStyle? textTextStyle,
+
+    /// TextOverflow for text
+    TextOverflow? textOverflow,
+
+    /// TextAlign for text
+    TextAlign textTextAlign = TextAlign.center,
 
     /// Determines if cancel button is shown or not
     bool showCancelBtn = false,
@@ -129,7 +141,11 @@ class CoolAlert {
       confirmBtnTextStyle: confirmBtnTextStyle,
       cancelBtnTextStyle: cancelBtnTextStyle,
       titleTextStyle: titleTextStyle,
+      titleOverflow: titleOverflow,
+      titleTextAlign: titleTextAlign,
       textTextStyle: textTextStyle,
+      textTextAlign: textTextAlign,
+      textOverflow: textOverflow,
       showCancelBtn: showCancelBtn,
       borderRadius: borderRadius,
       backgroundColor: backgroundColor,

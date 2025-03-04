@@ -56,6 +56,10 @@ CoolAlert.show(
 | loopAnimation        | boolean           | Determines if the animation should loop or not                                  |                                   false                                   |
 | closeOnConfirmBtnTap | boolean           | Detemines if dialog closes when the confirm button is tapped                    |                                   true                                    |
 | reverseBtnOrder      | boolean           | Reverse the order of the buttons                                                |                                   false                                   |
+| titleTextAlign       | TextAlign         | Text alignment for title                                                        |                             TextAlign.center                              |
+| titleOverflow        | TextOverflow      | Text overflow for title                                                         |                                   Null                                    |
+| textTextAlign        | TextAlign         | Text alignment for text                                                         |                             TextAlign.center                              |
+| textOverflow         | TextOverflow      | Text overflow for text                                                          |                                   Null                                    |
 
 
 
