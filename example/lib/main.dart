@@ -138,7 +138,7 @@ class _MyHomePageState extends State<MyHomePage> {
             onChanged: (value) => message = value,
           ),
           closeOnConfirmBtnTap: false,
-          onConfirmBtnTap: () async {
+          onConfirmBtnTap: (_) async {
             if (message.length < 5) {
               await CoolAlert.show(
                 context: context,
@@ -163,6 +163,33 @@ class _MyHomePageState extends State<MyHomePage> {
       color: Colors.orange,
     );
 
+    final unpoppableAlert = _buildButton(
+      onTap: () {
+        CoolAlert.show(
+          context: context,
+          type: CoolAlertType.custom,
+          text: 'You cannot pop this alert except with Navigator(root) pop',
+          // closeOnConfirmBtnTap: false,
+          canPop: false,
+          closeOnConfirmBtnTap: false,
+          onPopInvoked: (didPop) {
+            print('Pop invoked, has page been popped? $didPop');
+          },
+          confirmBtnText: "Pop with dialog context",
+          onConfirmBtnTap: (context) {
+            print("Confirm tapped");
+          },
+          showCancelBtn: true,
+          cancelBtnText: "Pop with root context",
+          onCancelBtnTap: (context) {
+            Navigator.of(context).pop();
+          },
+        );
+      },
+      text: 'Unpoppable',
+      color: Colors.blue,
+    );
+
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
@@ -179,6 +206,7 @@ class _MyHomePageState extends State<MyHomePage> {
             confirmAlert,
             loadingAlert,
             customAlert,
+            unpoppableAlert,
           ],
         ),
       ),
