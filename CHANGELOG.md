@@ -1,3 +1,8 @@
+## [2.1.0] - 04/03/2025
+
+- Added TextAlign & Overflow options for title & text (or body).
+- Updated README
+
 ## [2.0.1] - 06/03/2023
 
 - Updated README
