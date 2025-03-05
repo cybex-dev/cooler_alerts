@@ -17,11 +17,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flare_flutter:
-    git:
-      url: https://github.com/cybex-dev/Flare-Flutter.git
-      path: flare_flutter
-      ref: 6b27f53b8ed06e677272edd36f10004fe12cab7b
+  cool_flare: ^3.1.0
   lottie: ^3.3.1
   vector_math: ^2.1.4
 
