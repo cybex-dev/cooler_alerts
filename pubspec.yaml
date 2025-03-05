@@ -2,8 +2,8 @@ name: cooler_alerts
 description: A Flutter package to display animated alert dialogs, replacement for cool_alert.
 version: 2.1.1
 homepage: https://cooler-alerts.web.app/
-repository: https://github.com/cybex-dev/cooler_alert.git
-issue_tracker: https://github.com/cybex-dev/cooler_alert/issues
+repository: https://github.com/cybex-dev/cooler_alerts.git
+issue_tracker: https://github.com/cybex-dev/cooler_alerts/issues
 topics:
   - flutter
   - alert
@@ -15,10 +15,14 @@ environment:
   sdk: ">=2.18.0 <4.0.0"
 
 dependencies:
-  flare_flutter: ^3.0.2
   flutter:
     sdk: flutter
-  lottie: ^2.2.0
+  flare_flutter:
+    git:
+      url: https://github.com/cybex-dev/Flare-Flutter.git
+      path: flare_flutter
+      ref: 6b27f53b8ed06e677272edd36f10004fe12cab7b
+  lottie: ^3.3.1
   vector_math: ^2.1.4
 
 dev_dependencies:

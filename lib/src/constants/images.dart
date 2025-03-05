@@ -1,7 +1,7 @@
 class AppAnim {
-  static const loading = 'packages/cool_alert/assets/flare/loading.flr';
-  static const success = 'packages/cool_alert/assets/flare/success_check.flr';
-  static const error = 'packages/cool_alert/assets/flare/error_check.flr';
-  static const warning = 'packages/cool_alert/assets/flare/warning_check.flr';
-  static const info = 'packages/cool_alert/assets/flare/info_check.flr';
+  static const loading = 'packages/cooler_alerts/assets/flare/loading.flr';
+  static const success = 'packages/cooler_alerts/assets/flare/success_check.flr';
+  static const error = 'packages/cooler_alerts/assets/flare/error_check.flr';
+  static const warning = 'packages/cooler_alerts/assets/flare/warning_check.flr';
+  static const info = 'packages/cooler_alerts/assets/flare/info_check.flr';
 }
