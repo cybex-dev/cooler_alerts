@@ -1,7 +1,7 @@
 name: cooler_alerts
 description: A Flutter package to display animated alert dialogs, replacement for cool_alert.
 version: 2.1.0
-#homepage: https://github.com/cybex-dev/flutter_cool_alert.git
+homepage: https://cooler-alerts.web.app/
 repository: https://github.com/cybex-dev/flutter_cool_alert.git
 issue_tracker: https://github.com/cybex-dev/flutter_cool_alert/issues
 topics:
