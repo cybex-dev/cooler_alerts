@@ -1,5 +1,5 @@
-import 'package:flare_flutter/flare.dart';
-import 'package:flare_flutter/flare_controller.dart';
+import 'package:cool_flare/flare.dart';
+import 'package:cool_flare/flare_controller.dart';
 
 class SingleLoopController extends FlareController {
   final String _animation;
