@@ -49,6 +49,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.19.0"
+  cool_flare:
+    dependency: "direct main"
+    description:
+      name: cool_flare
+      sha256: f71bdbdb5ada377b5e19a92b8150f06b253ada4c6ef21ad819a247095a13aed2
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.1.0"
   crypto:
     dependency: transitive
     description:
@@ -73,15 +81,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.3"
-  flare_flutter:
-    dependency: "direct main"
-    description:
-      path: flare_flutter
-      ref: "6b27f53b8ed06e677272edd36f10004fe12cab7b"
-      resolved-ref: "6b27f53b8ed06e677272edd36f10004fe12cab7b"
-      url: "https://github.com/cybex-dev/Flare-Flutter.git"
-    source: git
-    version: "3.0.2"
   flutter:
     dependency: "direct main"
     description: flutter
