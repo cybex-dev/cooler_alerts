@@ -111,7 +111,7 @@ class CoolerAlerts {
     /// If false, the dialog will not be popped.
     bool canPop = true,
 
-    /// Triggered when the dialog is popped, a wrapper for [PopScope.onPopInvoked].
+    /// Triggered when the dialog is popped, a wrapper for [PopScope.onPopInvokedWithResult].
     /// [bool] parameter indicates if the dialog has been popped.
     void Function(bool)? onPopInvoked,
 
@@ -169,11 +169,12 @@ class CoolerAlerts {
 
     final child = PopScope(
       canPop: canPop,
-      onPopInvoked: onPopInvoked,
+      onPopInvokedWithResult: (didPop, result) => onPopInvoked?.call(didPop),
       child: dialog,
     );
 
     return showGeneralDialog(
+      // ignore: deprecated_member_use
       barrierColor: Colors.black.withOpacity(0.5),
       transitionBuilder: (context, anim1, __, widget) {
         switch (animType) {
