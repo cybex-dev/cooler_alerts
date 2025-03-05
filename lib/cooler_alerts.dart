@@ -120,6 +120,7 @@ class CoolerAlerts {
   }) {
     if (autoCloseDuration != null) {
       Future.delayed(autoCloseDuration, () {
+        // ignore: use_build_context_synchronously
         Navigator.of(context, rootNavigator: true).pop();
       });
     }
