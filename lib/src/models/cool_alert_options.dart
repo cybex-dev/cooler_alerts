@@ -1,5 +1,5 @@
-import 'package:cool_alert/cool_alert.dart';
 import 'package:flutter/widgets.dart';
+
 import '../constants/enums.dart';
 
 class CoolAlertOptions {

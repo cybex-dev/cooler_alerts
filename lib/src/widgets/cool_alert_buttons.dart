@@ -1,7 +1,7 @@
-import 'package:cool_alert/cool_alert.dart';
-import 'package:cool_alert/src/models/cool_alert_options.dart';
 import 'package:flutter/material.dart';
+
 import '../constants/enums.dart';
+import '../models/cool_alert_options.dart';
 
 class CoolAlertButtons extends StatelessWidget {
   final CoolAlertOptions options;
@@ -31,8 +31,7 @@ class CoolAlertButtons extends StatelessWidget {
   }
 
   Widget _okayBtn(context) {
-    final showCancelBtn =
-        options.type == CoolAlertType.confirm ? true : options.showCancelBtn!;
+    final showCancelBtn = options.type == CoolAlertType.confirm ? true : options.showCancelBtn!;
 
     final okayBtn = _buildButton(
       context: context,
@@ -59,8 +58,7 @@ class CoolAlertButtons extends StatelessWidget {
   }
 
   Widget _cancelBtn(context) {
-    final showCancelBtn =
-        options.type == CoolAlertType.confirm ? true : options.showCancelBtn!;
+    final showCancelBtn = options.type == CoolAlertType.confirm ? true : options.showCancelBtn!;
 
     final cancelBtn = _buildButton(
       context: context,

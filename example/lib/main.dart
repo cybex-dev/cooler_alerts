@@ -1,4 +1,4 @@
-import 'package:cooler_alerts/cool_alert.dart';
+import 'package:cooler_alerts/cooler_alerts.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -34,7 +34,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     final successAlert = _buildButton(
       onTap: () {
-        CoolAlert.show(
+        CoolerAlerts.show(
           context: context,
           type: CoolAlertType.success,
           text: 'Transaction completed successfully!',
@@ -47,7 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
     final errorAlert = _buildButton(
       onTap: () {
-        CoolAlert.show(
+        CoolerAlerts.show(
           context: context,
           type: CoolAlertType.error,
           title: 'Oops...',
@@ -61,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
     final warningAlert = _buildButton(
       onTap: () {
-        CoolAlert.show(
+        CoolerAlerts.show(
           context: context,
           type: CoolAlertType.warning,
           text: 'You just broke protocol',
@@ -73,7 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
     final infoAlert = _buildButton(
       onTap: () {
-        CoolAlert.show(
+        CoolerAlerts.show(
           context: context,
           type: CoolAlertType.info,
           text: 'Buy two, get one free',
@@ -94,7 +94,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
     final confirmAlert = _buildButton(
       onTap: () {
-        CoolAlert.show(
+        CoolerAlerts.show(
           context: context,
           type: CoolAlertType.confirm,
           text: 'Do you want to logout',
@@ -109,7 +109,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
     final loadingAlert = _buildButton(
       onTap: () {
-        CoolAlert.show(
+        CoolerAlerts.show(
           context: context,
           type: CoolAlertType.loading,
         );
@@ -121,7 +121,7 @@ class _MyHomePageState extends State<MyHomePage> {
     final customAlert = _buildButton(
       onTap: () {
         var message = '';
-        CoolAlert.show(
+        CoolerAlerts.show(
           context: context,
           type: CoolAlertType.custom,
           barrierDismissible: true,
@@ -140,7 +140,7 @@ class _MyHomePageState extends State<MyHomePage> {
           closeOnConfirmBtnTap: false,
           onConfirmBtnTap: (_) async {
             if (message.length < 5) {
-              await CoolAlert.show(
+              await CoolerAlerts.show(
                 context: context,
                 type: CoolAlertType.error,
                 text: 'Please enter at least 5 characters',
@@ -150,7 +150,7 @@ class _MyHomePageState extends State<MyHomePage> {
             }
             Navigator.of(context).pop();
             await Future.delayed(const Duration(milliseconds: 500), () async {
-              await CoolAlert.show(
+              await CoolerAlerts.show(
                 context: context,
                 type: CoolAlertType.success,
                 text: "Phone number '$message' has been saved!.",
@@ -165,7 +165,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
     final unpoppableAlert = _buildButton(
       onTap: () {
-        CoolAlert.show(
+        CoolerAlerts.show(
           context: context,
           type: CoolAlertType.custom,
           text: 'You cannot pop this alert except with Navigator(root) pop',

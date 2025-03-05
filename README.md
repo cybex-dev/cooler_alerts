@@ -13,7 +13,7 @@ cool_alert: ^2.0.1
 And add this import to your dart file.
 
 ```dart
-import 'package:cool_alert/cool_alert.dart';
+import 'package:cooler_alerts/cooler_alerts.dart';
 ```
 
 ## Image
