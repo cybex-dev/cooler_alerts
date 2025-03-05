@@ -6,6 +6,7 @@ import 'package:cool_alert/src/widgets/cool_alert_buttons.dart';
 import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import '../constants/enums.dart';
 
 class CoolAlertContainer extends StatelessWidget {
   final CoolAlertOptions options;

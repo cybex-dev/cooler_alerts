@@ -1,6 +1,7 @@
 import 'package:cool_alert/cool_alert.dart';
 import 'package:cool_alert/src/models/cool_alert_options.dart';
 import 'package:flutter/material.dart';
+import '../constants/enums.dart';
 
 class CoolAlertButtons extends StatelessWidget {
   final CoolAlertOptions options;
