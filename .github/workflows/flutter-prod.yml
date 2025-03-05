@@ -7,7 +7,7 @@ name: Flutter analyze, test & deploy example web app
 
 on:
   push:
-    branches: [ "cooler_alerts" ]
+    branches: [ "prod" ]
 
   workflow_dispatch:
 
