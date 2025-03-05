@@ -1,26 +1,16 @@
-library cool_alert;
-
 import 'dart:async';
 
 import 'package:flutter/material.dart';
 
+import 'src/constants/enums.dart';
 import 'src/models/cool_alert_options.dart';
 import 'src/utils/animate.dart';
 import 'src/widgets/cool_alert_container.dart';
 
-enum CoolAlertType { success, error, warning, confirm, info, loading, custom }
-
-enum CoolAlertAnimType {
-  scale,
-  rotate,
-  slideInDown,
-  slideInUp,
-  slideInLeft,
-  slideInRight,
-}
+export 'src/constants/enums.dart';
 
 /// CoolAlert.
-class CoolAlert {
+class CoolerAlerts {
   static Future show({
     /// BuildContext
     required BuildContext context,

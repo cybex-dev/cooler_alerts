@@ -1,19 +1,34 @@
-# cool_alert
+# cooler_alerts
 
 A Flutter package to display animated alert dialogs
+
+**Please note - the origin [author](https://github.com/emrade) of the [cool_alert](https://pub.dev/packages/cool_alert) hasn't provided updates for an extended period of time.** This package serves to support, and enhance the existing package.
 
 ## Usage
 
 To use this package, add the package as dependency in your `pubspec.yaml` file.
 
 ```dart
-cool_alert: ^2.0.1
+cooler_alerts: ^2.1.0
 ```
 
-And add this import to your dart file.
+Then, add this import to your dart file.
 
 ```dart
-import 'package:cool_alert/cool_alert.dart';
+import 'package:cooler_alerts/cooler_alerts.dart';
+```
+
+### Coming from the original `cool_alert` package?
+
+The transition is simple: 
+1. change the package name in `pubspec.yaml` from `cool_alert` to `cooler_alerts`
+2. replace all package references from
+```dart
+package:cool_alert/cool_alert.dart;
+```
+to
+```dart
+package:cooler_alerts/cooler_alerts.dart;
 ```
 
 ## Image

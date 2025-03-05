@@ -1,11 +1,12 @@
-import 'package:cool_alert/cool_alert.dart';
-import 'package:cool_alert/src/constants/images.dart';
-import 'package:cool_alert/src/models/cool_alert_options.dart';
-import 'package:cool_alert/src/utils/single_loop_controller.dart';
-import 'package:cool_alert/src/widgets/cool_alert_buttons.dart';
 import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+
+import '../constants/enums.dart';
+import '../constants/images.dart';
+import '../models/cool_alert_options.dart';
+import '../utils/single_loop_controller.dart';
+import 'cool_alert_buttons.dart';
 
 class CoolAlertContainer extends StatelessWidget {
   final CoolAlertOptions options;
@@ -94,17 +95,10 @@ class CoolAlertContainer extends StatelessWidget {
           child: options.lottieAsset == null
               ? FlareActor(
                   anim,
-                  animation:
-                      options.loopAnimation ? options.flareAnimationName : null,
-                  controller: options.loopAnimation
-                      ? null
-                      : SingleLoopController(
-                          options.flareAnimationName!,
-                          1,
-                        ),
+                  animation: options.loopAnimation ? options.flareAnimationName : null,
+                  controller: options.loopAnimation ? null : SingleLoopController(options.flareAnimationName!, 1),
                 )
-              : Lottie.asset(options.lottieAsset!,
-                  repeat: options.loopAnimation),
+              : Lottie.asset(options.lottieAsset!, repeat: options.loopAnimation),
         ),
       );
     }
