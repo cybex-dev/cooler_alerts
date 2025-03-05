@@ -1,4 +1,5 @@
 import 'package:cooler_alerts/cooler_alerts.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -173,11 +174,15 @@ class _MyHomePageState extends State<MyHomePage> {
           canPop: false,
           closeOnConfirmBtnTap: false,
           onPopInvoked: (didPop) {
-            print('Pop invoked, has page been popped? $didPop');
+            if (kDebugMode) {
+              print('Pop invoked, has page been popped? $didPop');
+            }
           },
           confirmBtnText: "Pop with dialog context",
           onConfirmBtnTap: (context) {
-            print("Confirm tapped");
+            if (kDebugMode) {
+              print("Confirm tapped");
+            }
           },
           showCancelBtn: true,
           cancelBtnText: "Pop with root context",
