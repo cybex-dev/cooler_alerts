@@ -1,3 +1,17 @@
+## [2.1.2] - 04/03/2025
+
+- Fix: resource animation strings
+- Use `cool_flare` as `flare_flutter` dependency
+- Update example app
+- Update pubspec
+- Update README
+
+## [2.1.1] - 04/03/2025
+
+- Update: example
+- Update: README
+- Fix: pubspec documentation
+
 ## [2.1.0] - 04/03/2025
 
 - Added TextAlign & Overflow options for title & text (or body).

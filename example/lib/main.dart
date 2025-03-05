@@ -152,6 +152,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Navigator.of(context).pop();
             await Future.delayed(const Duration(milliseconds: 500), () async {
               await CoolerAlerts.show(
+                // ignore: use_build_context_synchronously
                 context: context,
                 type: CoolAlertType.success,
                 text: "Phone number '$message' has been saved!.",

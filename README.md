@@ -9,7 +9,7 @@ A Flutter package to display animated alert dialogs
 To use this package, add the package as dependency in your `pubspec.yaml` file.
 
 ```dart
-cooler_alerts: ^2.1.0
+cooler_alerts: ^2.1.2
 ```
 
 Then, add this import to your dart file.
