@@ -7,7 +7,7 @@ environment:
   sdk: '>=2.19.2 <3.0.0'
 
 dependencies:
-  cool_alert:
+  cooler_alerts:
     path: ../
   cupertino_icons: ^1.0.5
   flutter:
