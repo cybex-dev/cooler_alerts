@@ -24,8 +24,9 @@ jobs:
         with:
           flutter-version: '3.27.4'
           channel: 'stable'
+          cache: false
 
-      - run: flutter --version
+      - run: flutter doctor --version
 
       - name: Install dependencies
         run: flutter pub get
